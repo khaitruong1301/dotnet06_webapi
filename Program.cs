@@ -1,6 +1,11 @@
 using Microsoft.OpenApi;
+using backend_netcore_dotnet06.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+//DI DbContext (EF - entity framework)
+builder.Services.AddDbContext<ProductStoreContext>();
 
 
 
