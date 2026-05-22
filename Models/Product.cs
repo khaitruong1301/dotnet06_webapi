@@ -9,7 +9,6 @@ public class Product
 {
     // Primary key indentity column
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     //Nvarchar(255) not null
     [Required]

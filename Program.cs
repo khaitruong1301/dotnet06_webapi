@@ -1,6 +1,7 @@
-using Microsoft.OpenApi;
+using backend_netcore_dotnet06.Helper;
 using backend_netcore_dotnet06.Models;
-
+using Microsoft.OpenApi;
+using AutoMapper;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -21,7 +22,8 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API documentation for .NET 10"
     });
 });
-
+//DI Automapper
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 
 
 
