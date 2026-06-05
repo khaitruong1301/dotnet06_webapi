@@ -1,14 +1,26 @@
 using backend_netcore_dotnet06.Helper;
+using backend_netcore_dotnet06.Models.DBQuanLyNhanVien;
 using backend_netcore_dotnet06.Models;
 using Microsoft.OpenApi;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+// using Microsoft.EntityFrameworkCore.Proxies;
 var builder = WebApplication.CreateBuilder(args);
 
 
 //DI DbContext (EF - entity framework)
 builder.Services.AddDbContext<ProductStoreContext>();
 
+//DI QuanLyNhanVienContext
+string? connectionStringQLNV = builder.Configuration.GetConnectionString("DBQuanLyNhanVienConnection");
 
+//Layzy proxy
+builder.Services.AddDbContext<QuanLyNhanVienContext>(options => {
+
+    options.UseSqlServer(connectionStringQLNV);
+    //cấu hình proxies
+    // options.UseLazyLoadingProxies(true);
+});
 
 //DI controller có [Route]
 builder.Services.AddControllers();

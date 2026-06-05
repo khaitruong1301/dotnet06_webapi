@@ -41,7 +41,7 @@ namespace backend_netcore_dotnet06.Controllers
         [HttpGet("GetAllProductsLinq")]
         public async Task<ActionResult> GetAllProductsLinq()
         {
-            var res = await _context.Products.Where(item=>item.Deleted == false).Skip(0).Take(10).Select(p => new ProductDTO
+            var res = await _context.Products.Where(item => item.Deleted == false).Skip(0).Take(10).Select(p => new ProductDTO
             {
                 Id = p.Id,
                 Name = p.Name,
@@ -231,10 +231,11 @@ namespace backend_netcore_dotnet06.Controllers
                 return NotFound("Không tìm thấy id");
             }
             prd.Deleted = true;
-         
             _context.SaveChanges();
             return StatusCode(200, "Xoá thành công");
         }
 
     }
+    //Viết action xoá sản phẩm
+    
 }
