@@ -29,6 +29,10 @@ public partial class QuanLyNhanVienContext : DbContext
 
     public virtual DbSet<PhongBan> PhongBans { get; set; }
 
+    public virtual DbSet<ViewDanhSachDuAnCuaNhanVien> ViewDanhSachDuAnCuaNhanViens { get; set; }
+
+    public virtual DbSet<ViewLayDanhSachNhanVienTheoDuAn> ViewLayDanhSachNhanVienTheoDuAns { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=DBQuanLyNhanVienConnection");
 
@@ -111,7 +115,6 @@ public partial class QuanLyNhanVienContext : DbContext
 
             entity.HasOne(d => d.MaPbNavigation).WithMany(p => p.NhanViens)
                 .HasForeignKey(d => d.MaPb)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_NhanVien_PhongBan");
 
             entity.HasOne(d => d.MaTruongPhongNavigation).WithMany(p => p.InverseMaTruongPhongNavigation)
@@ -145,6 +148,28 @@ public partial class QuanLyNhanVienContext : DbContext
             entity.Property(e => e.TenPb)
                 .HasMaxLength(100)
                 .HasColumnName("TenPB");
+        });
+
+        modelBuilder.Entity<ViewDanhSachDuAnCuaNhanVien>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("VIEW_DanhSachDuAnCuaNhanVien");
+
+            entity.Property(e => e.SoDienThoai).HasMaxLength(15);
+            entity.Property(e => e.TenNv)
+                .HasMaxLength(100)
+                .HasColumnName("TenNV");
+        });
+
+        modelBuilder.Entity<ViewLayDanhSachNhanVienTheoDuAn>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("VIEW_LayDanhSachNhanVienTheoDuAn");
+
+            entity.Property(e => e.NhanVienThamGia).HasColumnName("nhanVienThamGia");
+            entity.Property(e => e.TenDuAn).HasMaxLength(100);
         });
 
         OnModelCreatingPartial(modelBuilder);

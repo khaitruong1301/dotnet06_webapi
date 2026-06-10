@@ -27,6 +27,31 @@ namespace backend_netcore_dotnet06.Controllers
             _context = context;
         }
 
+        [HttpGet("LayDanhSachNhanVienTheoDuan")]
+        public async Task<IActionResult> LayDanhSachNhanVienTheoDuan([FromQuery] int maDuAn)
+        {
+            var lstNhanVien = await _context.ViewLayDanhSachNhanVienTheoDuAns.Where(item => item.Id == maDuAn).ToListAsync();
+
+
+            return Ok(lstNhanVien);
+        }
+
+
+
+        [HttpGet("LayDanhSachDuAnTheoMaNhanVien")]
+        public async Task<IActionResult> LayDanhSachDuAnTheoMaNhanVien ([FromQuery] int MaNhanVien){
+
+            var lstRes = await _context.ViewDanhSachDuAnCuaNhanViens.Where(n => n.Id == MaNhanVien).ToListAsync();
+            if(lstRes.Count() == 0)
+            {
+                return NotFound("Mã nhân viên không tồn tại!");
+            }
+
+            return Ok(lstRes);
+
+        }
+
+
         [HttpGet("LayThongTinNhanVienPhongBan")]
         public async Task<ActionResult> LayThongTinNhanVienPhongBan()
         {
@@ -99,7 +124,7 @@ namespace backend_netcore_dotnet06.Controllers
                     TenDuAn = nvda.MaDuAnNavigation.TenDuAn,
                     MaNhanVien = nvda.MaNhanVien,
                     TenNV = nvda.MaNhanVienNavigation.TenNv,
-                    NgaySinh = nvda.MaNhanVienNavigation.NgaySinh.ToString("dd/MM/yyyy"),
+                    NgaySinh = nvda.MaNhanVienNavigation.NgaySinh.Value.ToString("dd/MM/yyyy"),
                     SoDienThoai = nvda.MaNhanVienNavigation.SoDienThoai
                 }).ToListAsync();
             return Ok(lstNhanVienTheoDuAn);
