@@ -22,6 +22,7 @@ namespace backend_netcore_dotnet06.Controllers
     public class QuanLyNhanVienController : ControllerBase
     {
         private readonly QuanLyNhanVienContext _context;
+
         public QuanLyNhanVienController(QuanLyNhanVienContext context)
         {
             _context = context;
@@ -30,6 +31,7 @@ namespace backend_netcore_dotnet06.Controllers
         [HttpGet("LayDanhSachNhanVienTheoDuan")]
         public async Task<IActionResult> LayDanhSachNhanVienTheoDuan([FromQuery] int maDuAn)
         {
+            
             var lstNhanVien = await _context.ViewLayDanhSachNhanVienTheoDuAns.Where(item => item.Id == maDuAn).ToListAsync();
 
 
@@ -42,11 +44,13 @@ namespace backend_netcore_dotnet06.Controllers
         public async Task<IActionResult> LayDanhSachDuAnTheoMaNhanVien ([FromQuery] int MaNhanVien){
 
             var lstRes = await _context.ViewDanhSachDuAnCuaNhanViens.Where(n => n.Id == MaNhanVien).ToListAsync();
-            if(lstRes.Count() == 0)
+            if (lstRes.Count() == 0)
             {
                 return NotFound("Mã nhân viên không tồn tại!");
             }
 
+            
+            
             return Ok(lstRes);
 
         }
@@ -181,8 +185,6 @@ namespace backend_netcore_dotnet06.Controllers
             SqlParameter paramDanhSachGiaTri = new SqlParameter("@DanhSachGiaTri", DbType.String) { Value = danhSachGiaTri };
             var ketQua =  _context.Database.SqlQueryRaw<int>("EXEC InsertDynamicData_JSON @TableName, @DanhSachTenCot, @DanhSachGiaTri", paramTableName, paramDanhSachTenCot, paramDanhSachGiaTri).ToListAsync();
            
-    
-
         }
 
 

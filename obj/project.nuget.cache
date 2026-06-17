@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rWRSXA/FweM=",
+  "dgSpecHash": "xFNvvCT2KmY=",
   "success": true,
   "projectFilePath": "/Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/backend_netcore_dotnet06.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "/Users/khai/.nuget/packages/azure.identity/1.14.2/azure.identity.1.14.2.nupkg.sha512",
     "/Users/khai/.nuget/packages/castle.core/5.2.1/castle.core.5.2.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/10.0.0/microsoft.aspnetcore.authentication.jwtbearer.10.0.0.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.aspnetcore.components.authorization/10.0.0/microsoft.aspnetcore.components.authorization.10.0.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.aspnetcore.openapi/10.0.1/microsoft.aspnetcore.openapi.10.0.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.bcl.cryptography/9.0.4/microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
@@ -35,8 +37,8 @@
     "/Users/khai/.nuget/packages/microsoft.identitymodel.abstractions/8.14.0/microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.14.0/microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.identitymodel.logging/8.14.0/microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
-    "/Users/khai/.nuget/packages/microsoft.identitymodel.protocols/7.7.1/microsoft.identitymodel.protocols.7.7.1.nupkg.sha512",
-    "/Users/khai/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.7.1/microsoft.identitymodel.protocols.openidconnect.7.7.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.identitymodel.protocols/8.0.1/microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/8.0.1/microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.identitymodel.tokens/8.14.0/microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.openapi/2.4.1/microsoft.openapi.2.4.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
@@ -56,10 +58,23 @@
     "/Users/khai/.nuget/packages/system.composition.runtime/9.0.0/system.composition.runtime.9.0.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/system.composition.typedparts/9.0.0/system.composition.typedparts.9.0.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/system.configuration.configurationmanager/9.0.4/system.configuration.configurationmanager.9.0.4.nupkg.sha512",
-    "/Users/khai/.nuget/packages/system.identitymodel.tokens.jwt/7.7.1/system.identitymodel.tokens.jwt.7.7.1.nupkg.sha512",
+    "/Users/khai/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/system.security.cryptography.pkcs/9.0.4/system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
     "/Users/khai/.nuget/packages/system.security.cryptography.protecteddata/9.0.4/system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Components.Authorization will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "/Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/backend_netcore_dotnet06.csproj",
+      "warningLevel": 1,
+      "filePath": "/Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/backend_netcore_dotnet06.csproj",
+      "libraryId": "Microsoft.AspNetCore.Components.Authorization",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

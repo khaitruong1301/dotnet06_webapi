@@ -1,4 +1,5 @@
 //api-controller-async
+using Microsoft.AspNetCore.Cors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,11 +22,15 @@ namespace backend_netcore_dotnet06.Controllers
     {
         private readonly ProductStoreContext _context;
         private readonly IMapper _map;
+        private readonly IWebHostEnvironment _environment;
+
         //Read
-        public ProductController(ProductStoreContext context, IMapper map)
+        public ProductController(ProductStoreContext context, IMapper map, IWebHostEnvironment environment)
         {
             _context = context;
             _map = map;
+            _environment = environment;
+
         }
 
 
@@ -142,6 +147,8 @@ namespace backend_netcore_dotnet06.Controllers
             return StatusCode(201, "Add product successfully!");
         }
 
+        [EnableCors("AllowPost")]
+
         [HttpPost("AddProductLinq")]
         public async Task<ActionResult> AddProductLinq([FromBody] ProductInsertDTO newProduct) // dto hoặc viewmodel 
         {
@@ -235,7 +242,44 @@ namespace backend_netcore_dotnet06.Controllers
             return StatusCode(200, "Xoá thành công");
         }
 
+        //Viết api upload file và lưu vào wwwroot
+
+
+
+        [HttpPost("Uploadfile")]
+        public async Task<ActionResult> UploadFile(IFormFile files)
+        {
+            //Lưu file vào folder mặc định server 
+
+            if (files != null && files.Length > 0)
+            {
+                var uploadPath = Path.Combine(_environment.WebRootPath, "uploads");
+                // Nếu chưa có folder thì tạo
+                if (!Directory.Exists(uploadPath))
+                {
+                    Directory.CreateDirectory(uploadPath);
+                }
+
+                // Lấy tên file an toàn
+                var fileName = Path.GetFileName(files.FileName);
+
+                // Tạo tên file mới để tránh trùng
+                var newFileName = $"{Guid.NewGuid()}_{fileName}";
+
+                var filePath = Path.Combine(uploadPath, newFileName);//   
+
+                // Lưu file
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await files.CopyToAsync(stream);
+                }
+
+            }
+            return Ok("ok");
+
+        }
+
     }
     //Viết action xoá sản phẩm
-    
+
 }

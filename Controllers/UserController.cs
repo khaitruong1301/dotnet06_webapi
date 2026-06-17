@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using backend_netcore_dotnet06.Models.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_netcore_dotnet06.Controllers
@@ -20,17 +21,18 @@ namespace backend_netcore_dotnet06.Controllers
         public UserController()
         {
         }
-
+        [Authorize]
         [HttpGet("GetAllUserDTO")]
         public List<UserDTO> GetAllUserDTO()
         {
             return lstUserDTO;
         }
         [HttpGet("GetUserById/{id}")]
-        public UserDTO? GetUserById([FromRoute]int id)
+        public UserDTO? GetUserById([FromRoute] int id)
         {
             return lstUserDTO.SingleOrDefault(u => u.Id == id);
         }
+
         [HttpPost("AddUser")]
         public List<UserDTO> AddUser([FromBody]UserDTO user)
         {
