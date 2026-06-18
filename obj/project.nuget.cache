@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "xFNvvCT2KmY=",
+  "dgSpecHash": "Zvk1Hh4Nixk=",
   "success": true,
   "projectFilePath": "/Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/backend_netcore_dotnet06.csproj",
   "expectedPackageFiles": [
     "/Users/khai/.nuget/packages/automapper/16.1.1/automapper.16.1.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/azure.core/1.47.1/azure.core.1.47.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/azure.identity/1.14.2/azure.identity.1.14.2.nupkg.sha512",
+    "/Users/khai/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512",
     "/Users/khai/.nuget/packages/castle.core/5.2.1/castle.core.5.2.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/khai/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/10.0.0/microsoft.aspnetcore.authentication.jwtbearer.10.0.0.nupkg.sha512",

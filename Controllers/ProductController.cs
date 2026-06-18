@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authorization;
 //using backend_netcore_dotnet06.Models;
 
 namespace backend_netcore_dotnet06.Controllers
@@ -245,7 +246,7 @@ namespace backend_netcore_dotnet06.Controllers
         //Viết api upload file và lưu vào wwwroot
 
 
-
+        [Authorize(Roles = "Admin,User")]
         [HttpPost("Uploadfile")]
         public async Task<ActionResult> UploadFile(IFormFile files)
         {

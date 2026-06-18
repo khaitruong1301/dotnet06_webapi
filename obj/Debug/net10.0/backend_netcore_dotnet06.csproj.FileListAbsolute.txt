@@ -165,3 +165,4 @@
 /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Proxies.dll
 /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/bin/Debug/net10.0/backend_netcore_dotnet06.staticwebassets.runtime.json
 /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/bin/Debug/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/bin/Debug/net10.0/BCrypt-Net-Next.dll

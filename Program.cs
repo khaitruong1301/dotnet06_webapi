@@ -9,6 +9,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Security.Claims;
+using backend_netcore_dotnet06.Models.DBUser;
 // using Microsoft.EntityFrameworkCore.Proxies;
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
@@ -24,12 +25,22 @@ builder.Services.AddDbContext<ProductStoreContext>();
 string? connectionStringQLNV = builder.Configuration.GetConnectionString("DBQuanLyNhanVienConnection");
 
 //Layzy proxy
-builder.Services.AddDbContext<QuanLyNhanVienContext>(options => {
+builder.Services.AddDbContext<QuanLyNhanVienContext>(options =>
+{
 
     options.UseSqlServer(connectionStringQLNV);
     //cấu hình proxies
     // options.UseLazyLoadingProxies(true);
 });
+
+//DI cho userdb context
+string? connectionStringUser = builder.Configuration.GetConnectionString("DBUser");
+builder.Services.AddDbContext<UserDBContext>(options =>
+{
+    options.UseSqlServer(connectionStringUser);
+});
+
+
 
 //DI controller có [Route]
 builder.Services.AddControllers();
@@ -91,7 +102,8 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
 
 
 
-
+//DI jwt service
+builder.Services.AddScoped<JwtAuthService>();
 
 var app = builder.Build();
 
@@ -166,6 +178,13 @@ app.UseAuthorization();
 
 
 app.Run();
+
+
+
+
+
+
+
 
 
 
