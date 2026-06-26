@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Security.Claims;
 using backend_netcore_dotnet06.Models.DBUser;
+using backend_netcore_dotnet06.Middleware;
 // using Microsoft.EntityFrameworkCore.Proxies;
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
@@ -42,9 +43,12 @@ builder.Services.AddDbContext<UserDBContext>(options =>
 
 
 
+
+
 //DI controller có [Route]
 builder.Services.AddControllers();
-//DI Swagger
+//DI Swagger 
+
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -52,6 +56,25 @@ builder.Services.AddSwaggerGen(options =>
         Title = "My API",
         Version = "v1",
         Description = "API documentation for .NET 10"
+    });
+    // Khai báo scheme Bearer -> tạo nút "Authorize" + ô nhập token trong Swagger
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Nhập token JWT vào ô dưới đây"
+    });
+
+    // Áp scheme cho toàn bộ endpoint -> hiện icon ổ khóa và tự gắn header Authorization khi gọi API
+    options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecuritySchemeReference("Bearer", document),
+            new List<string>()
+        }
     });
 });
 //DI Automapper
@@ -105,6 +128,13 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
 //DI jwt service
 builder.Services.AddScoped<JwtAuthService>();
 
+
+//DI custom middleware CountIpRequestMiddleware
+
+builder.Services.AddTransient<CountIpRequestMiddleware>();
+
+builder.Services.AddTransient<SubDomainMiddleware>();
+
 var app = builder.Build();
 
 
@@ -120,18 +150,11 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-
-
-
-
 //Sử dụng middleware controller 
 app.MapControllers();
 //Xử lý cors cho domain AllowGETData
 app.UseCors("AllowGETData");
 app.UseCors("AllowPost");
-
-
-
 //Xử lý ngoại lệ tập trung
 // app.UseExceptionHandler(errorApp =>
 // {
@@ -167,11 +190,13 @@ app.UseStaticFiles(new StaticFileOptions
     ),
     RequestPath = "/files"
 });
+//Sử dụng middleware tự viết CountIpRequestMiddleware để đếm số lượng request theo ip
+app.UseMiddleware<CountIpRequestMiddleware>(); //Đếm số lượng request theo ip
+app.UseMiddleware<SubDomainMiddleware>(); //Xử lý tên miền phụ
 
 
 app.UseAuthentication(); //Xác thực (đăng nhập)
-app.UseAuthorization();
-
+app.UseAuthorization(); //Phân quyền
 
 
 

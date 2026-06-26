@@ -60,7 +60,7 @@ public class JwtAuthService
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.UtcNow.AddMinutes(2), // Token hết hạn sau 1 giờ
+            Expires = DateTime.UtcNow.AddHours(1), // Token hết hạn sau 1 giờ
             SigningCredentials = credentials,
             Issuer = _issuer,                 // Thêm Issuer vào token
             Audience = _audience,              // Thêm Audience vào token
@@ -72,35 +72,32 @@ public class JwtAuthService
         return tokenHandler.WriteToken(token);
     }
 
-    // public string DecodePayloadToken(string token)
-    // {
-    //     try
-    //     {
-    //         // Kiểm tra token có null hoặc rỗng không
-    //         if (string.IsNullOrEmpty(token))
-    //         {
-    //             throw new ArgumentException("Token không được để trống", nameof(token));
-    //         }
+    public string DecodePayloadToken(string token)
+    {
+        try
+        {
+            // Kiểm tra token có null hoặc rỗng không
+            if (string.IsNullOrEmpty(token))
+            {
+                throw new ArgumentException("Token không được để trống", nameof(token));
+            }
 
-    //         // Tạo handler và đọc token
-    //         var handler = new JwtSecurityTokenHandler();
-    //         var jwtToken = handler.ReadJwtToken(token);
-
-    //         // Lấy username từ claims (thường nằm trong claim "sub" hoặc "name")
-    //         var usernameClaim = jwtToken.Claims.FirstOrDefault(x =>x.Type == "UserName"); // Common in some identity providers
-
-    //         if (usernameClaim == null)
-    //         {
-    //             throw new InvalidOperationException("Không tìm thấy username trong payload");
-    //         }
-
-    //         return usernameClaim.Value;
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         // Xử lý lỗi (có thể log lỗi ở đây)
-    //         throw new InvalidOperationException($"Lỗi khi decode token: {ex.Message}", ex);
-    //     }
-    // }
+            // Tạo handler và đọc token
+            var handler = new JwtSecurityTokenHandler();
+            var jwtToken = handler.ReadJwtToken(token);
+            // Lấy username từ claims (thường nằm trong claim "sub" hoặc "name")
+            var usernameClaim = jwtToken.Claims.FirstOrDefault(x =>x.Type == "UserName"); // Common in some identity providers
+            if (usernameClaim == null)
+            {
+                throw new InvalidOperationException("Không tìm thấy username trong payload");
+            }
+            return usernameClaim.Value;
+        }
+        catch (Exception ex)
+        {
+            // Xử lý lỗi (có thể log lỗi ở đây)
+            throw new InvalidOperationException($"Lỗi khi decode token: {ex.Message}", ex);
+        }
+    }
 
 }

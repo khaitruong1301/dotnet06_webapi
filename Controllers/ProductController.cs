@@ -1,5 +1,6 @@
 //api-controller-async
 using Microsoft.AspNetCore.Cors;
+using static System.Net.WebRequestMethods;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -38,12 +39,14 @@ namespace backend_netcore_dotnet06.Controllers
         [HttpGet("GetAllProducts")]
         public async Task<ActionResult> GetAllProductsSQLRaw()
         {
+      
+
             // List<Product> res = await _context.Products.FromSqlRaw("SELECT Id,Name,Alias,Price,Description,ImageUrl,Deleted,CreatedAt,UpdatedAt FROM Products").ToListAsync();
             List<ProductDTO> res = await _context.Database.SqlQueryRaw<ProductDTO>($@"SELECT Id,Name,Alias,Price FROM Products order by id desc offset 0 rows fetch next 10 rows only").ToListAsync();
 
             return Ok(res);
         }
-
+        [Authorize(Roles = "User")]
         [HttpGet("GetAllProductsLinq")]
         public async Task<ActionResult> GetAllProductsLinq()
         {

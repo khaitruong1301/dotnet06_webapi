@@ -94,6 +94,42 @@ namespace backend_netcore_dotnet06.Controllers
 
         }
 
+        [HttpGet("GetUserInfo")]
+        [Authorize]
+        public async Task<IActionResult> GetUserInfo()
+        {
+            //Decode token (HttpContext)
+            bool valid = HttpContext.Request.Headers.TryGetValue("Authorization", out var token);
+            if (valid)
+            {
+                string tokenValue = token.ToString().Replace("Bearer ", "");
+                string username = _jwt.DecodePayloadToken(tokenValue);
+                //truy vấn vào bảng user để tra profile 
+                var userResponse = _context.Users.SingleOrDefault(item => item.Username == username);
+                if (userResponse != null)
+                {
+                    return StatusCode(200, new
+                    {
+                        message = "Lấy thông tin user thành công !",
+                        data = new
+                        {
+                            username = userResponse.Username,
+                            email = userResponse.Email,
+                            phone = userResponse.Phone,
+                            fullname = userResponse.Fullname
+                        }
+                    });
+                }
+                return StatusCode(404, new
+                {
+                    message = "Không tìm thấy thông tin user !"
+                });
+
+            }
+            
+            return Ok();
+        }
+
 
     }
 }
