@@ -1,0 +1,1043 @@
+2026-06-30 19:43:50.216 +07:00 [INF] User profile is available. Using '/Users/khai/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-30 19:43:50.321 +07:00 [INF] Now listening on: http://localhost:5266
+2026-06-30 19:43:50.323 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 19:43:50.323 +07:00 [INF] Hosting environment: Development
+2026-06-30 19:43:50.323 +07:00 [INF] Content root path: /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06
+2026-06-30 19:44:03.623 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoFillter/TestFilterNameAsync?model=dsadsa - null null
+2026-06-30 19:44:04.733 +07:00 [INF] Executed DbCommand (40ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 19:44:04.844 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 19:44:04.862 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoFillterController.TestFilterBlockIpAddressAsync (backend_netcore_dotnet06)'
+2026-06-30 19:44:04.875 +07:00 [INF] Route matched with {action = "TestFilterBlockIpAddress", controller = "DemoFillter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] TestFilterBlockIpAddressAsync(System.String) on controller backend_netcore_dotnet06.Controllers.DemoFillterController (backend_netcore_dotnet06).
+2026-06-30 19:44:04.897 +07:00 [INF] Đây là log filter: Action: TestFilterBlockIpAddress, Parameters: {"model":"dsadsa"}, Response: {"Message":"B\u1EA1n \u0111\u00E3 \u0111i qua filter BlockIpAddress th\u00E0nh c\u00F4ng!"}
+2026-06-30 19:44:04.898 +07:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2026-06-30 19:44:04.902 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoFillterController.TestFilterBlockIpAddressAsync (backend_netcore_dotnet06) in 23.8842ms
+2026-06-30 19:44:04.903 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoFillterController.TestFilterBlockIpAddressAsync (backend_netcore_dotnet06)'
+2026-06-30 19:44:04.912 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoFillter/TestFilterNameAsync?model=dsadsa - 403 34 text/plain; charset=utf-8 1286.2215ms
+2026-06-30 19:44:59.546 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoFillter/TestFilterNameAsync?model=dsadsa - null null
+2026-06-30 19:44:59.578 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 19:44:59.591 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 19:44:59.593 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoFillterController.TestFilterBlockIpAddressAsync (backend_netcore_dotnet06)'
+2026-06-30 19:44:59.593 +07:00 [INF] Route matched with {action = "TestFilterBlockIpAddress", controller = "DemoFillter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] TestFilterBlockIpAddressAsync(System.String) on controller backend_netcore_dotnet06.Controllers.DemoFillterController (backend_netcore_dotnet06).
+2026-06-30 19:44:59.594 +07:00 [INF] Đây là log filter: Action: TestFilterBlockIpAddress, Parameters: {"model":"dsadsa"}, Response: {"Message":"B\u1EA1n \u0111\u00E3 \u0111i qua filter BlockIpAddress th\u00E0nh c\u00F4ng!"}
+2026-06-30 19:44:59.596 +07:00 [INF] Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+2026-06-30 19:44:59.597 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoFillterController.TestFilterBlockIpAddressAsync (backend_netcore_dotnet06) in 3.576ms
+2026-06-30 19:44:59.597 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoFillterController.TestFilterBlockIpAddressAsync (backend_netcore_dotnet06)'
+2026-06-30 19:44:59.597 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoFillter/TestFilterNameAsync?model=dsadsa - 403 34 text/plain; charset=utf-8 51.124ms
+2026-06-30 19:57:20.157 +07:00 [INF] Application is shutting down...
+2026-06-30 19:57:27.460 +07:00 [INF] User profile is available. Using '/Users/khai/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-30 19:57:27.558 +07:00 [INF] Now listening on: http://localhost:5266
+2026-06-30 19:57:27.559 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 19:57:27.559 +07:00 [INF] Hosting environment: Development
+2026-06-30 19:57:27.560 +07:00 [INF] Content root path: /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06
+2026-06-30 19:57:42.552 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 19:57:42.622 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 70.5265ms
+2026-06-30 19:57:42.640 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:57:42.641 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 19:57:42.642 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:57:42.649 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 7.8534ms
+2026-06-30 19:57:42.653 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 10.8828ms
+2026-06-30 19:57:42.654 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 12.6675ms
+2026-06-30 19:57:42.664 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 19:57:42.664 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 19:57:42.683 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 18.7207ms
+2026-06-30 19:57:42.683 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 19:57:42.685 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 20.5622ms
+2026-06-30 19:57:42.691 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 7.6257ms
+2026-06-30 19:57:42.751 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 19:57:42.868 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.0378ms
+2026-06-30 19:58:11.043 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 19:58:11.044 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.6191ms
+2026-06-30 19:58:11.055 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:58:11.055 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.4957ms
+2026-06-30 19:58:11.056 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:58:11.065 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 9.3434ms
+2026-06-30 19:58:11.062 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 19:58:11.069 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 7.0921ms
+2026-06-30 19:58:11.076 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 19:58:11.077 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.458ms
+2026-06-30 19:58:11.083 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 19:58:11.083 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.2955ms
+2026-06-30 19:58:11.088 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 19:58:11.089 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.3428ms
+2026-06-30 19:58:11.153 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 19:58:11.163 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.5449ms
+2026-06-30 19:58:19.586 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 19:58:19.586 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.9204ms
+2026-06-30 19:58:19.594 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 19:58:19.594 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:58:19.595 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.8872ms
+2026-06-30 19:58:19.595 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:58:19.596 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 1.4721ms
+2026-06-30 19:58:19.602 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 19:58:19.595 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 0.3702ms
+2026-06-30 19:58:19.605 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 19:58:19.606 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.2625ms
+2026-06-30 19:58:19.603 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.3425ms
+2026-06-30 19:58:19.602 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 19:58:19.612 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 9.2635ms
+2026-06-30 19:58:19.637 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:58:19.638 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:58:19.639 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.9927ms
+2026-06-30 19:58:19.638 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 19:58:19.639 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 1.766ms
+2026-06-30 19:58:19.650 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.9108ms
+2026-06-30 19:58:27.213 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 19:58:27.213 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.4554ms
+2026-06-30 19:58:27.222 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:58:27.222 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.4644ms
+2026-06-30 19:58:27.222 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 19:58:27.223 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 1.5822ms
+2026-06-30 19:58:27.222 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:58:27.224 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 1.8155ms
+2026-06-30 19:58:27.227 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 19:58:27.227 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 19:58:27.227 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.4605ms
+2026-06-30 19:58:27.227 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.4177ms
+2026-06-30 19:58:27.228 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 19:58:27.230 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 1.9924ms
+2026-06-30 19:58:27.263 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 19:58:27.270 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:58:27.271 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.2995ms
+2026-06-30 19:58:27.270 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:58:27.271 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.7037ms
+2026-06-30 19:58:27.273 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.7373ms
+2026-06-30 19:58:35.170 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 19:58:35.171 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.7185ms
+2026-06-30 19:58:35.179 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:58:35.179 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:58:35.179 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 19:58:35.179 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.2651ms
+2026-06-30 19:58:35.179 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.339ms
+2026-06-30 19:58:35.181 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 1.0898ms
+2026-06-30 19:58:35.188 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 19:58:35.188 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 19:58:35.190 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 2.0473ms
+2026-06-30 19:58:35.191 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.1991ms
+2026-06-30 19:58:35.188 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 19:58:35.194 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 5.4171ms
+2026-06-30 19:58:35.245 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 19:58:35.245 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:58:35.247 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 2.1122ms
+2026-06-30 19:58:35.247 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:58:35.248 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 1.6128ms
+2026-06-30 19:58:35.249 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.9944ms
+2026-06-30 19:59:32.602 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 19:59:32.603 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.5082ms
+2026-06-30 19:59:32.610 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 19:59:32.611 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 1.107ms
+2026-06-30 19:59:32.611 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 19:59:32.612 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 0.3877ms
+2026-06-30 19:59:32.611 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 19:59:32.612 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 1.1431ms
+2026-06-30 19:59:32.613 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 19:59:32.613 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.2535ms
+2026-06-30 19:59:32.617 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 19:59:32.621 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 3.863ms
+2026-06-30 19:59:32.617 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 19:59:32.622 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 5.4061ms
+2026-06-30 19:59:32.655 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 19:59:32.659 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.4506ms
+2026-06-30 20:18:20.951 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 20:18:20.951 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.3213ms
+2026-06-30 20:18:20.965 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 20:18:20.966 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 1.0708ms
+2026-06-30 20:18:20.967 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 20:18:20.968 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.6821ms
+2026-06-30 20:18:20.969 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 20:18:20.969 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 0.1482ms
+2026-06-30 20:18:20.972 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 20:18:20.972 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 20:18:20.972 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.164ms
+2026-06-30 20:18:20.972 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 20:18:20.976 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 1.4855ms
+2026-06-30 20:18:20.976 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 4.1616ms
+2026-06-30 20:18:21.020 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 20:18:21.022 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 20:18:21.022 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.3202ms
+2026-06-30 20:18:21.022 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 20:18:21.023 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.0739ms
+2026-06-30 20:18:21.025 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.9272ms
+2026-06-30 20:18:40.107 +07:00 [INF] Application is shutting down...
+2026-06-30 20:18:57.067 +07:00 [INF] User profile is available. Using '/Users/khai/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-30 20:18:57.148 +07:00 [INF] Now listening on: http://localhost:5266
+2026-06-30 20:18:57.149 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 20:18:57.149 +07:00 [INF] Hosting environment: Development
+2026-06-30 20:18:57.149 +07:00 [INF] Content root path: /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06
+2026-06-30 20:19:00.743 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoFillter/TestExceptionFilter - null null
+2026-06-30 20:19:01.908 +07:00 [INF] Executed DbCommand (33ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 20:19:02.016 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 20:19:02.041 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoFillterController.TestExceptionFilter (backend_netcore_dotnet06)'
+2026-06-30 20:19:02.046 +07:00 [INF] Route matched with {action = "TestExceptionFilter", controller = "DemoFillter"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult TestExceptionFilter() on controller backend_netcore_dotnet06.Controllers.DemoFillterController (backend_netcore_dotnet06).
+2026-06-30 20:19:02.051 +07:00 [ERR] Đây là log filter: Exception: Attempted to divide by zero., StackTrace:    at backend_netcore_dotnet06.Controllers.DemoFillterController.TestExceptionFilter() in /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06/Controllers/DemoFillterController.cs:line 70
+   at lambda_method65(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-06-30 20:19:02.058 +07:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-30 20:19:02.083 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoFillterController.TestExceptionFilter (backend_netcore_dotnet06) in 34.4495ms
+2026-06-30 20:19:02.083 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoFillterController.TestExceptionFilter (backend_netcore_dotnet06)'
+2026-06-30 20:19:02.089 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoFillter/TestExceptionFilter - 500 null application/json; charset=utf-8 1346.7028ms
+2026-06-30 20:57:12.877 +07:00 [INF] Application is shutting down...
+2026-06-30 20:57:19.689 +07:00 [INF] User profile is available. Using '/Users/khai/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-30 20:57:19.806 +07:00 [INF] Now listening on: http://localhost:5266
+2026-06-30 20:57:19.806 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 20:57:19.807 +07:00 [INF] Hosting environment: Development
+2026-06-30 20:57:19.807 +07:00 [INF] Content root path: /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06
+2026-06-30 20:57:28.092 +07:00 [INF] Application is shutting down...
+2026-06-30 21:05:53.520 +07:00 [INF] User profile is available. Using '/Users/khai/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-30 21:05:54.006 +07:00 [INF] Now listening on: https://localhost:7116
+2026-06-30 21:05:54.006 +07:00 [INF] Now listening on: http://localhost:5266
+2026-06-30 21:05:54.007 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 21:05:54.007 +07:00 [INF] Hosting environment: Development
+2026-06-30 21:05:54.008 +07:00 [INF] Content root path: /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06
+2026-06-30 21:05:56.394 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/ - null null
+2026-06-30 21:05:57.301 +07:00 [INF] Executed DbCommand (27ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:05:57.402 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:05:57.434 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/ - 404 0 null 1040.7007ms
+2026-06-30 21:05:57.435 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7116/, Response status code: 404
+2026-06-30 21:05:57.453 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/favicon.ico - null null
+2026-06-30 21:05:57.480 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:05:57.487 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:05:57.489 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/favicon.ico - 404 0 null 36.3389ms
+2026-06-30 21:05:57.489 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7116/favicon.ico, Response status code: 404
+2026-06-30 21:06:20.450 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger - null null
+2026-06-30 21:06:20.453 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger - 301 0 null 3.5933ms
+2026-06-30 21:06:20.455 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/index.html - null null
+2026-06-30 21:06:20.494 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/index.html - 200 null text/html;charset=utf-8 39.0569ms
+2026-06-30 21:06:20.510 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/swagger-ui.css - null null
+2026-06-30 21:06:20.511 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:06:20.513 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/index.js - null null
+2026-06-30 21:06:20.513 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/index.js - 200 null application/javascript;charset=utf-8 0.6117ms
+2026-06-30 21:06:20.510 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/index.css - null null
+2026-06-30 21:06:20.511 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:06:20.523 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/index.css - 200 152 text/css 11.9621ms
+2026-06-30 21:06:20.530 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/swagger-ui.css - 200 26479 text/css 19.2926ms
+2026-06-30 21:06:20.531 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/swagger-ui-standalone-preset.js - 200 76613 text/javascript 20.3757ms
+2026-06-30 21:06:20.544 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/swagger-ui-bundle.js - 200 418181 text/javascript 32.4478ms
+2026-06-30 21:06:20.723 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/favicon-16x16.png - null null
+2026-06-30 21:06:20.724 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/favicon-16x16.png - 200 665 image/png 1.2091ms
+2026-06-30 21:06:20.726 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/swagger/v1/swagger.json - null null
+2026-06-30 21:06:20.813 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.8282ms
+2026-06-30 21:06:33.699 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:33.762 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:33.777 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:33.780 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:33.790 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:33.817 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[deleted], [u].[email], [u].[fullname], [u].[hashPassword], [u].[phone], [u].[username]
+FROM [users] AS [u]
+2026-06-30 21:06:33.854 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:33.872 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 78.8553ms
+2026-06-30 21:06:33.872 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:33.874 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 174.4384ms
+2026-06-30 21:06:50.892 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:50.901 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:50.912 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:50.913 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:50.913 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:50.914 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:50.914 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.6699ms
+2026-06-30 21:06:50.914 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:50.914 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 22.0525ms
+2026-06-30 21:06:51.390 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:51.405 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:51.411 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:51.411 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:51.412 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:51.412 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:51.412 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.3075ms
+2026-06-30 21:06:51.412 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:51.412 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 22.5949ms
+2026-06-30 21:06:51.644 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:51.651 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:51.662 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:51.663 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:51.664 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:51.664 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:51.665 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.7663ms
+2026-06-30 21:06:51.665 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:51.665 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 21.1205ms
+2026-06-30 21:06:57.983 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:57.990 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:58.001 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:58.002 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.002 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:58.002 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:58.002 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.3049ms
+2026-06-30 21:06:58.003 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.003 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 20.1322ms
+2026-06-30 21:06:58.465 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:58.471 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:58.487 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:58.488 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.488 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:58.489 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:58.489 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.7393ms
+2026-06-30 21:06:58.489 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.489 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 24.9261ms
+2026-06-30 21:06:58.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:58.643 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:58.657 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:58.658 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.658 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:58.658 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:58.658 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.1787ms
+2026-06-30 21:06:58.658 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.658 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 22.0848ms
+2026-06-30 21:06:58.845 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:06:58.849 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:06:58.862 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:06:58.862 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.862 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:06:58.862 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:06:58.862 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.1683ms
+2026-06-30 21:06:58.863 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:06:58.863 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7116/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 17.7613ms
+2026-06-30 21:07:09.960 +07:00 [INF] Application is shutting down...
+2026-06-30 21:09:06.217 +07:00 [INF] User profile is available. Using '/Users/khai/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-30 21:09:06.298 +07:00 [INF] Now listening on: http://localhost:5266
+2026-06-30 21:09:06.299 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 21:09:06.299 +07:00 [INF] Hosting environment: Development
+2026-06-30 21:09:06.299 +07:00 [INF] Content root path: /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06
+2026-06-30 21:09:40.037 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/ - null null
+2026-06-30 21:09:41.254 +07:00 [INF] Executed DbCommand (32ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:09:41.363 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:09:41.452 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/ - 404 null null 1417.0057ms
+2026-06-30 21:09:41.459 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5266/, Response status code: 404
+2026-06-30 21:09:45.198 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:09:45.225 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 26.9062ms
+2026-06-30 21:09:45.234 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:09:45.235 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:09:45.236 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:09:45.239 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:09:45.241 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:09:45.249 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:09:45.276 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 37.319ms
+2026-06-30 21:09:45.279 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 30.1026ms
+2026-06-30 21:09:45.280 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 44.3927ms
+2026-06-30 21:09:45.280 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 44.735ms
+2026-06-30 21:09:45.291 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 50.3159ms
+2026-06-30 21:09:45.307 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 73.0565ms
+2026-06-30 21:09:45.478 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:09:45.571 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 93.0359ms
+2026-06-30 21:09:49.717 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:09:49.828 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:09:49.842 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:09:49.846 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:09:49.856 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:09:49.878 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[deleted], [u].[email], [u].[fullname], [u].[hashPassword], [u].[phone], [u].[username]
+FROM [users] AS [u]
+2026-06-30 21:09:49.916 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:09:49.942 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 78.4171ms
+2026-06-30 21:09:49.944 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:09:49.945 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 227.786ms
+2026-06-30 21:10:15.056 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:10:15.111 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:10:15.119 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:10:15.122 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:10:15.122 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:10:15.123 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:10:15.123 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.8408ms
+2026-06-30 21:10:15.123 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:10:15.123 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 67.2364ms
+2026-06-30 21:11:03.667 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:11:03.668 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.8874ms
+2026-06-30 21:11:03.718 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:11:03.718 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:11:03.720 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 2.1724ms
+2026-06-30 21:11:03.719 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:11:03.720 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:11:03.721 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.2677ms
+2026-06-30 21:11:03.718 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.3142ms
+2026-06-30 21:11:03.720 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:11:03.720 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 1.9058ms
+2026-06-30 21:11:03.719 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:11:03.722 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 2.2871ms
+2026-06-30 21:11:03.723 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 3.9697ms
+2026-06-30 21:11:03.788 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:11:03.824 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.3693ms
+2026-06-30 21:11:20.871 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:11:20.878 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:11:20.898 +07:00 [INF] Executed DbCommand (19ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:11:20.899 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:20.903 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:11:20.906 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:11:20.909 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 4.389ms
+2026-06-30 21:11:20.910 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:20.910 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 39.0123ms
+2026-06-30 21:11:25.974 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:11:26.010 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:11:26.041 +07:00 [INF] Executed DbCommand (19ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:11:26.042 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.043 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:11:26.043 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:11:26.052 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 9.1414ms
+2026-06-30 21:11:26.053 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.053 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 78.4922ms
+2026-06-30 21:11:26.307 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:11:26.318 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:11:26.340 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:11:26.340 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.340 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:11:26.340 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:11:26.341 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.401ms
+2026-06-30 21:11:26.341 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.341 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 33.6603ms
+2026-06-30 21:11:26.522 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:11:26.533 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:11:26.544 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:11:26.545 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.545 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:11:26.546 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:11:26.546 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.222ms
+2026-06-30 21:11:26.546 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.548 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 25.944ms
+2026-06-30 21:11:26.734 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:11:26.743 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:11:26.754 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:11:26.755 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.755 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:11:26.756 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:11:26.756 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.5727ms
+2026-06-30 21:11:26.757 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:26.757 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 23.4216ms
+2026-06-30 21:11:27.739 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:11:27.751 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:11:27.760 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:11:27.762 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:27.762 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:11:27.763 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:11:27.763 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.4376ms
+2026-06-30 21:11:27.763 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:27.763 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 24.3146ms
+2026-06-30 21:11:27.914 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:11:27.922 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:11:27.931 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:11:27.935 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:27.935 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:11:27.935 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:11:27.944 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 8.4012ms
+2026-06-30 21:11:27.944 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:11:27.947 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 32.4513ms
+2026-06-30 21:11:33.399 +07:00 [INF] Application is shutting down...
+2026-06-30 21:11:57.666 +07:00 [INF] User profile is available. Using '/Users/khai/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2026-06-30 21:11:57.752 +07:00 [INF] Now listening on: http://localhost:5266
+2026-06-30 21:11:57.753 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-30 21:11:57.753 +07:00 [INF] Hosting environment: Development
+2026-06-30 21:11:57.753 +07:00 [INF] Content root path: /Volumes/Cybersoft/dotnet06/NetCoreBackend/backend_netcore_dotnet06
+2026-06-30 21:12:00.464 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:01.768 +07:00 [INF] Executed DbCommand (34ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:01.878 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:01.909 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:01.943 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:01.955 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[deleted], [u].[email], [u].[fullname], [u].[hashPassword], [u].[phone], [u].[username]
+FROM [users] AS [u]
+2026-06-30 21:12:01.981 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:02.044 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 97.1119ms
+2026-06-30 21:12:02.045 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:02.052 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 1588.7564ms
+2026-06-30 21:12:10.027 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:10.054 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:10.067 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:10.068 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.068 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:10.068 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:10.069 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.5919ms
+2026-06-30 21:12:10.069 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.069 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 42.5116ms
+2026-06-30 21:12:10.215 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:10.309 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:10.321 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:10.324 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.324 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:10.325 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:10.325 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.2732ms
+2026-06-30 21:12:10.328 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.328 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 113.2196ms
+2026-06-30 21:12:10.379 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:10.390 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:10.401 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:10.403 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.404 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:10.404 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:10.410 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 6.1093ms
+2026-06-30 21:12:10.411 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.411 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 31.5917ms
+2026-06-30 21:12:10.548 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:10.558 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:10.568 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:10.568 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.569 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:10.569 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:10.569 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.217ms
+2026-06-30 21:12:10.569 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.569 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 20.768ms
+2026-06-30 21:12:10.714 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:10.721 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:10.727 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:10.728 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.729 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:10.729 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:10.729 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 0.25ms
+2026-06-30 21:12:10.729 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.729 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 15.2041ms
+2026-06-30 21:12:10.872 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:10.877 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:10.888 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:10.889 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.889 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:10.889 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:10.890 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 1.2101ms
+2026-06-30 21:12:10.890 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:10.891 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 18.5923ms
+2026-06-30 21:12:21.115 +07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5266/api/DemoCache/ClearCache - null null
+2026-06-30 21:12:21.117 +07:00 [INF] CORS policy execution failed.
+2026-06-30 21:12:21.117 +07:00 [INF] Request origin http://localhost:5266 does not have permission to access the resource.
+2026-06-30 21:12:21.117 +07:00 [INF] CORS policy execution failed.
+2026-06-30 21:12:21.117 +07:00 [INF] Request origin http://localhost:5266 does not have permission to access the resource.
+2026-06-30 21:12:21.122 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:21.135 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:21.135 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.ClearCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:21.137 +07:00 [INF] Route matched with {action = "ClearCache", controller = "DemoCache"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ClearCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:21.140 +07:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-06-30 21:12:21.140 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.ClearCache (backend_netcore_dotnet06) in 2.649ms
+2026-06-30 21:12:21.141 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.ClearCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:21.142 +07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5266/api/DemoCache/ClearCache - 204 null null 26.9008ms
+2026-06-30 21:12:24.991 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:12:25.001 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:12:25.029 +07:00 [INF] Executed DbCommand (26ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:12:25.030 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:25.030 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:12:25.035 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[deleted], [u].[email], [u].[fullname], [u].[hashPassword], [u].[phone], [u].[username]
+FROM [users] AS [u]
+2026-06-30 21:12:25.036 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:12:25.036 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 5.9308ms
+2026-06-30 21:12:25.036 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:12:25.038 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 46.605ms
+2026-06-30 21:14:32.175 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:14:32.187 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:14:32.196 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:14:32.196 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:14:32.201 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:14:32.201 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:14:32.209 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 7.9742ms
+2026-06-30 21:14:32.209 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:14:32.209 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 34.0431ms
+2026-06-30 21:14:38.138 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:14:38.183 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 44.6737ms
+2026-06-30 21:14:38.192 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:14:38.193 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:14:38.193 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 1.099ms
+2026-06-30 21:14:38.194 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:14:38.195 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 2.7972ms
+2026-06-30 21:14:38.196 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 2.1805ms
+2026-06-30 21:14:38.193 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:14:38.203 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:14:38.203 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:14:38.204 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.5191ms
+2026-06-30 21:14:38.204 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 11.342ms
+2026-06-30 21:14:38.205 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 1.4243ms
+2026-06-30 21:14:38.242 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:14:38.338 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.4362ms
+2026-06-30 21:14:41.583 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/CheckRamCapacityCache - null null
+2026-06-30 21:14:41.596 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:14:41.606 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:14:41.606 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06)'
+2026-06-30 21:14:41.607 +07:00 [INF] Route matched with {action = "CheckRamCapacityCache", controller = "DemoCache"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRamCapacityCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:14:41.608 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType13`3[[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-30 21:14:41.611 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06) in 3.6277ms
+2026-06-30 21:14:41.611 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06)'
+2026-06-30 21:14:41.611 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/CheckRamCapacityCache - 200 null application/json; charset=utf-8 28.7217ms
+2026-06-30 21:15:03.334 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:15:03.335 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.581ms
+2026-06-30 21:15:03.342 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:15:03.343 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:15:03.343 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.2235ms
+2026-06-30 21:15:03.343 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.298ms
+2026-06-30 21:15:03.346 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:15:03.346 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.3952ms
+2026-06-30 21:15:03.346 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:15:03.346 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 0.0937ms
+2026-06-30 21:15:03.347 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:15:03.347 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:15:03.348 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.6726ms
+2026-06-30 21:15:03.347 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.2698ms
+2026-06-30 21:15:03.375 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:15:03.381 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.6425ms
+2026-06-30 21:15:05.627 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:15:05.628 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.7216ms
+2026-06-30 21:15:05.635 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:15:05.635 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:15:05.635 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:15:05.638 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 2.4708ms
+2026-06-30 21:15:05.636 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.3588ms
+2026-06-30 21:15:05.638 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:15:05.635 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.1734ms
+2026-06-30 21:15:05.636 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:15:05.639 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.6588ms
+2026-06-30 21:15:05.640 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:15:05.640 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.3392ms
+2026-06-30 21:15:05.639 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 3.3677ms
+2026-06-30 21:15:05.666 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:15:05.670 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.3876ms
+2026-06-30 21:15:07.507 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:15:07.507 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.3966ms
+2026-06-30 21:15:07.516 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:15:07.516 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:15:07.516 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.1913ms
+2026-06-30 21:15:07.516 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:15:07.517 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 0.2837ms
+2026-06-30 21:15:07.516 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:15:07.516 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.203ms
+2026-06-30 21:15:07.519 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 2.6882ms
+2026-06-30 21:15:07.516 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:15:07.520 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 3.8743ms
+2026-06-30 21:15:07.517 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:15:07.522 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 5.9468ms
+2026-06-30 21:15:07.554 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:15:07.557 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.6729ms
+2026-06-30 21:15:23.390 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:15:23.391 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.677ms
+2026-06-30 21:15:23.400 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:15:23.400 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.2048ms
+2026-06-30 21:15:23.412 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:15:23.412 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:15:23.412 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:15:23.412 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:15:23.413 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 1.1799ms
+2026-06-30 21:15:23.414 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 1.5668ms
+2026-06-30 21:15:23.412 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.2455ms
+2026-06-30 21:15:23.412 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:15:23.412 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 0.6501ms
+2026-06-30 21:15:23.415 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 3.501ms
+2026-06-30 21:15:23.467 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:15:23.467 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.2431ms
+2026-06-30 21:15:23.467 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:15:23.470 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 2.7337ms
+2026-06-30 21:15:23.466 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:15:23.491 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.6672ms
+2026-06-30 21:15:27.790 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/CheckRamCapacityCache - null null
+2026-06-30 21:15:27.799 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:15:27.808 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:15:27.809 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06)'
+2026-06-30 21:15:27.810 +07:00 [INF] Route matched with {action = "CheckRamCapacityCache", controller = "DemoCache"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRamCapacityCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:15:27.810 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType14`3[[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-30 21:15:27.817 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06) in 7.1632ms
+2026-06-30 21:15:27.817 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06)'
+2026-06-30 21:15:27.817 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/CheckRamCapacityCache - 200 null application/json; charset=utf-8 27.0252ms
+2026-06-30 21:15:33.220 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - null null
+2026-06-30 21:15:33.229 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:15:33.252 +07:00 [INF] Executed DbCommand (22ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:15:33.252 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:15:33.257 +07:00 [INF] Route matched with {action = "GetAllUserCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:15:33.258 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:15:33.262 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06) in 4.9059ms
+2026-06-30 21:15:33.262 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserCache (backend_netcore_dotnet06)'
+2026-06-30 21:15:33.262 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserCache - 200 null application/json; charset=utf-8 42.4173ms
+2026-06-30 21:15:39.226 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/CheckRamCapacityCache - null null
+2026-06-30 21:15:39.236 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:15:39.245 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:15:39.246 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06)'
+2026-06-30 21:15:39.246 +07:00 [INF] Route matched with {action = "CheckRamCapacityCache", controller = "DemoCache"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CheckRamCapacityCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:15:39.246 +07:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType14`3[[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-30 21:15:39.246 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06) in 0.3845ms
+2026-06-30 21:15:39.246 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.CheckRamCapacityCache (backend_netcore_dotnet06)'
+2026-06-30 21:15:39.247 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/CheckRamCapacityCache - 200 null application/json; charset=utf-8 20.5006ms
+2026-06-30 21:17:49.016 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:17:49.017 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 1.0209ms
+2026-06-30 21:17:49.050 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:17:49.050 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.3674ms
+2026-06-30 21:17:49.054 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:17:49.055 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.1241ms
+2026-06-30 21:17:49.050 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:17:49.052 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:17:49.061 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 10.5435ms
+2026-06-30 21:17:49.059 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:17:49.062 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 2.7114ms
+2026-06-30 21:17:49.070 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:17:49.077 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 7.0557ms
+2026-06-30 21:17:49.061 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 9.1975ms
+2026-06-30 21:17:49.115 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:17:49.116 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:17:49.120 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 4.2435ms
+2026-06-30 21:17:49.125 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:17:49.126 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.6205ms
+2026-06-30 21:17:49.149 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 15.8025ms
+2026-06-30 21:18:09.749 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserOutputCache - null null
+2026-06-30 21:18:09.778 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@ipAddress='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [i].[id], [i].[count], [i].[dateRequest], [i].[ip]
+FROM [IpCount] AS [i]
+WHERE [i].[ip] = @ipAddress AND [i].[dateRequest] = CONVERT(date, GETDATE())
+2026-06-30 21:18:09.787 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [IpCount] SET [count] = @p0
+OUTPUT 1
+WHERE [id] = @p1;
+2026-06-30 21:18:09.788 +07:00 [INF] Executing endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserOutputCache (backend_netcore_dotnet06)'
+2026-06-30 21:18:09.792 +07:00 [INF] Route matched with {action = "GetAllUserOutputCache", controller = "DemoCache"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllUserOutputCache() on controller backend_netcore_dotnet06.Controllers.DemoCacheController (backend_netcore_dotnet06).
+2026-06-30 21:18:09.803 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[id], [u].[deleted], [u].[email], [u].[fullname], [u].[hashPassword], [u].[phone], [u].[username]
+FROM [users] AS [u]
+2026-06-30 21:18:09.803 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend_netcore_dotnet06.Models.DBUser.User, backend_netcore_dotnet06, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-30 21:18:09.805 +07:00 [INF] Executed action backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserOutputCache (backend_netcore_dotnet06) in 12.8462ms
+2026-06-30 21:18:09.805 +07:00 [INF] Executed endpoint 'backend_netcore_dotnet06.Controllers.DemoCacheController.GetAllUserOutputCache (backend_netcore_dotnet06)'
+2026-06-30 21:18:09.805 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/api/DemoCache/GetAllUserOutputCache - 200 null application/json; charset=utf-8 56.0677ms
+2026-06-30 21:25:57.509 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:25:57.511 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 1.1422ms
+2026-06-30 21:25:57.518 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:25:57.519 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.3809ms
+2026-06-30 21:25:57.520 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:25:57.520 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:25:57.520 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 0.4433ms
+2026-06-30 21:25:57.520 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 0.2289ms
+2026-06-30 21:25:57.520 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:25:57.521 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:25:57.522 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 0.845ms
+2026-06-30 21:25:57.521 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.6466ms
+2026-06-30 21:25:57.520 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:25:57.523 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 2.3628ms
+2026-06-30 21:25:57.650 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:25:57.651 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:25:57.652 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 0.184ms
+2026-06-30 21:25:57.651 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:25:57.654 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 2.5484ms
+2026-06-30 21:25:57.657 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.6315ms
+2026-06-30 21:26:07.284 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:26:07.285 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 1.2486ms
+2026-06-30 21:26:07.299 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:26:07.299 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 0.2097ms
+2026-06-30 21:26:07.299 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:26:07.300 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:26:07.303 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 2.7917ms
+2026-06-30 21:26:07.299 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:26:07.299 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:26:07.308 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 9.3144ms
+2026-06-30 21:26:07.299 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:26:07.309 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 10.0567ms
+2026-06-30 21:26:07.307 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 7.9639ms
+2026-06-30 21:26:07.301 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 1.4849ms
+2026-06-30 21:26:07.341 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:26:07.347 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.8104ms
+2026-06-30 21:26:12.410 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.html - null null
+2026-06-30 21:26:12.410 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.html - 304 null null 0.4299ms
+2026-06-30 21:26:12.489 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - null null
+2026-06-30 21:26:12.490 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/_framework/aspnetcore-browser-refresh.js - 200 14543 application/javascript; charset=utf-8 1.5594ms
+2026-06-30 21:26:12.510 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.js - null null
+2026-06-30 21:26:12.511 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.js - 304 null null 0.4787ms
+2026-06-30 21:26:12.491 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - null null
+2026-06-30 21:26:12.516 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui.css - 304 null null 24.9517ms
+2026-06-30 21:26:12.498 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - null null
+2026-06-30 21:26:12.523 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-standalone-preset.js - 304 null null 25.2913ms
+2026-06-30 21:26:12.510 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/index.css - null null
+2026-06-30 21:26:12.512 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - null null
+2026-06-30 21:26:12.539 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/index.css - 304 null null 28.7338ms
+2026-06-30 21:26:12.539 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/swagger-ui-bundle.js - 304 null null 26.691ms
+2026-06-30 21:26:12.579 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - null null
+2026-06-30 21:26:12.585 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5266/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.7843ms

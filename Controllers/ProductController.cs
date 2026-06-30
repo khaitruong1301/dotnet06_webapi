@@ -16,6 +16,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authorization;
 //using backend_netcore_dotnet06.Models;
 
+
 namespace backend_netcore_dotnet06.Controllers
 {
     [Route("api/[controller]")]
@@ -25,6 +26,7 @@ namespace backend_netcore_dotnet06.Controllers
         private readonly ProductStoreContext _context;
         private readonly IMapper _map;
         private readonly IWebHostEnvironment _environment;
+
 
         //Read
         public ProductController(ProductStoreContext context, IMapper map, IWebHostEnvironment environment)
@@ -39,7 +41,7 @@ namespace backend_netcore_dotnet06.Controllers
         [HttpGet("GetAllProducts")]
         public async Task<ActionResult> GetAllProductsSQLRaw()
         {
-      
+
 
             // List<Product> res = await _context.Products.FromSqlRaw("SELECT Id,Name,Alias,Price,Description,ImageUrl,Deleted,CreatedAt,UpdatedAt FROM Products").ToListAsync();
             List<ProductDTO> res = await _context.Database.SqlQueryRaw<ProductDTO>($@"SELECT Id,Name,Alias,Price FROM Products order by id desc offset 0 rows fetch next 10 rows only").ToListAsync();
@@ -57,6 +59,8 @@ namespace backend_netcore_dotnet06.Controllers
                 Alias = p.Alias,
                 Price = p.Price
             }).ToListAsync();
+
+
             return Ok(res);
         }
         [HttpGet("GetProductsPaging")]
@@ -233,6 +237,7 @@ namespace backend_netcore_dotnet06.Controllers
         }
 
         [HttpDelete("DeletetProduct")]
+
         public async Task<ActionResult> DeletetProduct(int id)
         {
             //Kiểm tra sản phẩm có tồn tại trong db hay không

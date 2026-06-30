@@ -4,6 +4,7 @@ using backend_netcore_dotnet06.Models;
 using Microsoft.OpenApi;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System.Text.Json;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
@@ -42,13 +43,9 @@ builder.Services.AddDbContext<UserDBContext>(options =>
 });
 
 
-
-
-
 //DI controller có [Route]
 builder.Services.AddControllers();
 //DI Swagger 
-
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -135,8 +132,31 @@ builder.Services.AddTransient<CountIpRequestMiddleware>();
 
 builder.Services.AddTransient<SubDomainMiddleware>();
 
-var app = builder.Build();
 
+
+//DI serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("logs/app-.log", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+//Gắn Serilog vào pipeline logging -> ILogger<T> trong controller sẽ dùng Serilog (đọc từ Log.Logger ở trên)
+builder.Services.AddSerilog();
+
+//DI filter LogFilter
+builder.Services.AddScoped<LogFilter>();
+//Di filter ExceptionActionFilter
+builder.Services.AddScoped<ExceptionActionFilter>();
+
+//DI memory cache
+builder.Services.AddMemoryCache();
+
+
+
+
+
+var app = builder.Build();
 
 //Nếu là localhost (môi trường dev mới có trang swagger)
 if (app.Environment.IsDevelopment())
